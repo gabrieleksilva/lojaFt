@@ -24,7 +24,7 @@ img{
 
 .form-control.search-input {
   width: 100%;
-  padding-right: 40px; /* espaço pro botão */
+  padding-right: 40px;
   background-color: #D9D9D9;
   border: 1px solid black;
   border-radius: 10px;
