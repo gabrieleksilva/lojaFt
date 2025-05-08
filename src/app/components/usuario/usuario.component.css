@@ -1,9 +1,24 @@
-form{
-  background-color: white;
+main {
+  padding: 40px;
 }
+
 form {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+#labelLogin{
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0%;
+  color: #000000;
 }
