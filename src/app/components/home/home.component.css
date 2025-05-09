@@ -1,0 +1,23 @@
+#h4Home{
+  font-family: "Inter", sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0%;
+  color: #000000;
+
+}
+p{
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0%;
+  color: #000000;
+  text-align: justify;
+}
+
+img{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

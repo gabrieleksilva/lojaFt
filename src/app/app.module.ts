@@ -9,6 +9,7 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { CadastroLoginComponent } from './components/cadastro-login/cadastro-login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CadastroLoginComponent } from './components/cadastro-login/cadastro-log
     ContatoComponent,
     QuizComponent,
     CadastroLoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
