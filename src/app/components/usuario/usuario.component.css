@@ -2,7 +2,7 @@ main {
   padding: 40px;
 }
 
-form {
+#formUsuario {
   max-width: 400px;
   width: 100%;
   padding: 20px;
@@ -11,7 +11,9 @@ form {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.form-group {
+#divEmailLinhaUsuario {
+  margin-bottom: 15px;
+}#divSenhaLinhaUsuario {
   margin-bottom: 15px;
 }
 #labelLogin{
