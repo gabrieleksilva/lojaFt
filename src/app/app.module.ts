@@ -7,6 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ContatoComponent } from './components/contato/contato.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ContatoComponent } from './components/contato/contato.component';
     FooterComponent,
     UsuarioComponent,
     ContatoComponent,
+    QuizComponent,
   ],
   imports: [
     BrowserModule,

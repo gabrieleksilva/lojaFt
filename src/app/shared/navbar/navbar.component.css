@@ -5,6 +5,9 @@ header.container-fluid.py-3 {
   color: #000000;
   font-family: "Inter", sans-serif;
   font-size: 12px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  padding: 8px 12px;
 }
 .navbar{
   margin-bottom: -20px;
@@ -57,5 +60,10 @@ svg.bi.bi-cart{
   margin-left: 50px;
 }
 
-
+.nav-link:hover {
+  background-color: #5f6365;
+  color: #f9fafc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
 
