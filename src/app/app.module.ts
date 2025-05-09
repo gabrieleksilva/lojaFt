@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { CadastroLoginComponent } from './components/cadastro-login/cadastro-login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
     UsuarioComponent,
     ContatoComponent,
     QuizComponent,
+    CadastroLoginComponent,
   ],
   imports: [
     BrowserModule,
