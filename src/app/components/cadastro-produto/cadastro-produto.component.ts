@@ -32,8 +32,6 @@ export class CadastroProdutoComponent {
 
   onSubmit() {
 
-    console.log(this.form.value)
-
     const produtoDTO = {
       nome: this.form.value.nome,
       marca: this.form.value.marca,
