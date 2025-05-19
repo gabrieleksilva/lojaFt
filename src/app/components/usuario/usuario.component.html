@@ -1,11 +1,11 @@
 <main id="mainContato" class="flex-fill d-flex justify-content-center align-items-center text-center p-5">
-  <form id="formUsuario" class="w-100" style="max-width: 400px;">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" id="formUsuario" class="w-100" style="max-width: 400px;">
     <div id="divEmailLinhaUsuario" class="form-group mb-3">
       <label id="labelLogin">Login</label>
-      <input type="email" class="form-control" placeholder="Email">
+      <input formControlName="email" type="email" class="form-control" placeholder="Email">
     </div>
     <div id="divSenhaLinhaUsuario" class="form-group mb-3">
-      <input type="password" class="form-control" placeholder="Senha">
+      <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
   </form>

@@ -1,17 +1,17 @@
 <main id="mainCadastroUsuario" class="flex-fill d-flex justify-content-center align-items-center text-center p-5">
-  <form id="formCadastroUsuario" class="w-100" style="max-width: 400px;">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" id="formCadastroUsuario"  class="w-100" style="max-width: 400px;">
     <label id="labelCadastroUsuario">Criar Conta</label>
     <div id="divNomeLinhaCadastroUsuario" class="form-group mb-3">
-      <input type="text" class="form-control" placeholder="Nome Completo">
+      <input formControlName="nome" type="text" class="form-control" placeholder="Nome Completo">
     </div>
     <div id="divEmailLinhaCadastroUsuario" class="form-group mb-3">
-      <input type="email" class="form-control" placeholder="Email">
+      <input formControlName="email" type="email" class="form-control" placeholder="Email">
     </div>
     <div id="divTelLinhaCadastroUsuario" class="form-group mb-3">
-      <input type="tel" class="form-control" placeholder="Celular">
+      <input formControlName="telefone" type="tel" class="form-control" placeholder="Celular">
     </div>
     <div id="divSenhaLinhaCadastroUsuario" class="form-group mb-3">
-      <input type="password" class="form-control" placeholder="Senha">
+      <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
     </div>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>

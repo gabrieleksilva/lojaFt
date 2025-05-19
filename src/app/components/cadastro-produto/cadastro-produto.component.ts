@@ -51,7 +51,11 @@ export class CadastroProdutoComponent {
     }
 
     this.http.post('http://localhost:8080/loja/produtos', formData).subscribe({
-      next: () => alert('Produto cadastrado com sucesso!'),
+      next: () => {
+        alert('Produto cadastrado com sucesso!');
+        this.form.reset();
+        this.selectedFile = null;
+      },
       error: err => alert('Erro ao cadastrar produto: ' + err.message)
     });
   }

@@ -1,0 +1,19 @@
+<h1>Argamassas e Rejuntes</h1>
+<div class="produtos-container">
+  <div *ngFor="let produto of produtos" class="produto-card">
+
+    <img [src]="'http://localhost:8080' + produto.imagem" alt="{{ produto.nome }}" width="200" height="150" />
+    <p><strong>Nome:</strong> {{ produto.nome }}</p>
+    <p><strong>Marca:</strong> {{ produto.marca }}</p>
+    <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
+    <p><strong>Preço:</strong> {{ produto.vlrUnit | currency:'BRL' }}</p>
+    <button class="btn-comprar">Comprar</button>
+    <button class="btn-visualizar" [routerLink]="['/home']">Visualizar</button>
+  </div>
+</div>
+
+<div class="paginacao">
+  <button (click)="paginaAnterior()" [disabled]="paginaAtual === 0">Anterior</button>
+  <span>Página {{ paginaAtual + 1 }} de {{ totalPaginas }}</span>
+  <button (click)="proximaPagina()" [disabled]="paginaAtual + 1 >= totalPaginas">Próxima</button>
+</div>

@@ -13,6 +13,8 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { CadastroLoginComponent } from './components/cadastro-login/cadastro-login.component';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroProdutoComponent } from './components/cadastro-produto/cadastro-produto.component';
+import { ListarPisosComponent } from './components/listar-pisos/listar-pisos.component';
+import { ListarArgamassasComponent } from './components/listar-argamassas/listar-argamassas.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CadastroProdutoComponent } from './components/cadastro-produto/cadastro
     CadastroLoginComponent,
     HomeComponent,
     CadastroProdutoComponent,
+    ListarPisosComponent,
+    ListarArgamassasComponent,
   ],
   imports: [
     BrowserModule,
