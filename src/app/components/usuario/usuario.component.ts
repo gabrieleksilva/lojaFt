@@ -22,12 +22,12 @@ export class UsuarioComponent  {
      if (this.form.valid) {
        this.http.post('http://localhost:8080/loja/login', this.form.value).subscribe({
          next: () => {
-           alert('Usuario cadastrado com sucesso!');
+           alert('Usuario permitido!');
            this.form.reset();
          },
          error: err => {
            console.error(err);
-           alert('Erro ao cadastrar usuario.');
+           alert('Usuario inválido.');
          }
        });
      }

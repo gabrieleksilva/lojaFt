@@ -1,17 +1,20 @@
-<div class="produto-card" *ngIf="produtoSelecionado">
-  <div class="produto-conteudo">
-    <img [src]="'http://localhost:8080' + produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" width="200" height="150" />
-    <div class="produto-detalhes">
-      <h3>{{ produtoSelecionado.nome }}</h3>
-      <p><strong>Marca:</strong> {{ produtoSelecionado.marca }}</p>
-      <p><strong>Estilo:</strong> {{ produtoSelecionado.estiloDecoracao }}</p>
-      <p><strong>Cor:</strong> {{ produtoSelecionado.corAmbiente }}</p>
-      <p><strong>Instalação:</strong> {{ produtoSelecionado.localInstalacao }}</p>
-      <p><strong>Prioridade:</strong> {{ produtoSelecionado.prioridade }}</p>
-      <p><strong>Descrição:</strong> {{ produtoSelecionado.descQuantidade }}</p>
-      <p><strong>Tipo:</strong> {{ produtoSelecionado.tipo }}</p>
-      <p><strong>Preço:</strong> {{ produtoSelecionado.vlrUnit | currency:'BRL' }}</p>
+<div class="produtos-container">
+  <div class="produto-card" *ngIf="produtoSelecionado">
+    <div class="produto-conteudo">
+      <img [src]="'http://localhost:8080' + produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" />
+      <div class="produto-detalhes">
+        <h3>{{ produtoSelecionado.nome }}</h3>
+        <p><strong>Marca:</strong> {{ produtoSelecionado.marca }}</p>
+        <p><strong>Estilo de decoração:</strong> {{ produtoSelecionado.estiloDecoracao }}</p>
+        <p><strong>Cor do ambiente:</strong> {{ produtoSelecionado.corAmbiente }}</p>
+        <p><strong>Local de Instalação:</strong> {{ produtoSelecionado.localInstalacao }}</p>
+        <p><strong>Prioridade:</strong> {{ produtoSelecionado.prioridade }}</p>
+        <p><strong>Descrição:</strong> {{ produtoSelecionado.descQuantidade }}</p>
+        <p><strong>Preço:</strong> {{ produtoSelecionado.vlrUnit | currency:'BRL' }}</p>
+        <button class="btn btn-primary" (click)="adicionarAoCarrinho(produtoSelecionado)">Comprar</button>
+        <button type="button" class="btn btn-warning" [routerLink]="['/editarProduto', produtoSelecionado.id]">Editar</button>
+        <button class="btn btn-danger" (click)="deletarProduto(produtoSelecionado.id)">Excluir</button>
+      </div>
     </div>
   </div>
-  <button class="btn-comprar">Comprar</button>
 </div>

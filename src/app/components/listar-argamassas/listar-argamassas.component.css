@@ -26,27 +26,9 @@ h1 {
   margin-bottom: 10px;
 }
 
-.btn-comprar {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #0d9032;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.btn-visualizar {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #117eeb;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.btn-comprar:hover {
-  background-color: #1b61c1;
+button{
+ margin-right: 10px;
 }
 
 .paginacao {

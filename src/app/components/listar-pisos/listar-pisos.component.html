@@ -7,8 +7,10 @@
     <p><strong>Marca:</strong> {{ produto.marca }}</p>
     <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
     <p><strong>Preço:</strong> {{ produto.vlrUnit | currency:'BRL' }}</p>
-    <button class="btn-comprar">Comprar</button>
-    <button class="btn-visualizar" [routerLink]="['/listarProduto', produto.id]">Visualizar</button>
+    <div class="d-flex">
+      <button class="btn btn-success me-2">Comprar</button>
+      <button class="btn btn-primary me-2" [routerLink]="['/listarProduto', produto.id]">Visualizar</button>
+    </div>
   </div>
 </div>
 

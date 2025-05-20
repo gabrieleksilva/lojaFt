@@ -1,3 +1,4 @@
+import { ResultadoQuizComponent } from './components/resultado-quiz/resultado-quiz.component';
 import { ListarLoucasComponent } from './components/listar-loucas/listar-loucas.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,8 @@ import { ListarGabinetesComponent } from './components/listar-gabinetes/listar-g
 import { ListarTorneirasComponent } from './components/listar-torneiras/listar-torneiras.component';
 import { ListarIluminacoesComponent } from './components/listar-iluminacoes/listar-iluminacoes.component';
 import { ListarProdutoComponent } from './components/listar-produto/listar-produto.component';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
+import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
 
 const routes: Routes = [
   {path: 'login', component: UsuarioComponent},
@@ -28,6 +31,9 @@ const routes: Routes = [
   {path: 'listarTorneiras', component: ListarTorneirasComponent},
   {path: 'listarIluminacoes', component: ListarIluminacoesComponent},
   {path: 'listarProduto/:id', component: ListarProdutoComponent},
+  {path: 'editarProduto/:id', component: EditarProdutoComponent},
+  {path: 'carrinho', component: CarrinhoComponent},
+  {path: 'resultado', component: ResultadoQuizComponent},
   {path: 'contato', component: ContatoComponent}
 ];
 

@@ -20,6 +20,10 @@ import { ListarGabinetesComponent } from './components/listar-gabinetes/listar-g
 import { ListarTorneirasComponent } from './components/listar-torneiras/listar-torneiras.component';
 import { ListarIluminacoesComponent } from './components/listar-iluminacoes/listar-iluminacoes.component';
 import { ListarProdutoComponent } from './components/listar-produto/listar-produto.component';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
+import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
+import { FormsModule } from '@angular/forms';
+import { ResultadoQuizComponent } from './components/resultado-quiz/resultado-quiz.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +43,16 @@ import { ListarProdutoComponent } from './components/listar-produto/listar-produ
     ListarTorneirasComponent,
     ListarIluminacoesComponent,
     ListarProdutoComponent,
+    CarrinhoComponent,
+    EditarProdutoComponent,
+    ResultadoQuizComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

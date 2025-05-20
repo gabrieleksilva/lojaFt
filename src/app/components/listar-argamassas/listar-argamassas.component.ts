@@ -11,7 +11,7 @@ export class ListarArgamassasComponent implements OnInit {
   paginaAtual: number = 0;
   totalPaginas: number = 0;
   tamanhoPagina: number = 3;
-  tipo: string = "ARGAMASSAS";
+  tipoProduto: string = "ARGAMASSAS";
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class ListarArgamassasComponent implements OnInit {
   }
 
   carregarProdutos(): void {
-  this.http.get<any>(`http://localhost:8080/loja/produtos/tipo?tipo=${this.tipo}&page=${this.paginaAtual}&size=${this.tamanhoPagina}`)
+  this.http.get<any>(`http://localhost:8080/loja/produtos/tipo?tipo=${this.tipoProduto}&page=${this.paginaAtual}&size=${this.tamanhoPagina}`)
     .subscribe({
       next: (resposta) => {
         this.produtos = resposta.content;

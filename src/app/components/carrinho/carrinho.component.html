@@ -1,0 +1,7 @@
+<h2>Seu Carrinho</h2>
+<div *ngFor="let item of itensCarrinho; let i = index">
+  <p>{{ item.nome }} - {{ item.vlrUnit | currency:'BRL' }}</p>
+  <button (click)="remover(i)">Remover</button>
+</div>
+
+<button (click)="limpar()">Limpar Carrinho</button>
