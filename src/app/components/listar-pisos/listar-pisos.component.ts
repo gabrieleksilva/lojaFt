@@ -1,6 +1,6 @@
+import { CarrinhoService } from './../carrinho.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-listar-pisos',
@@ -14,24 +14,35 @@ export class ListarPisosComponent implements OnInit {
   tamanhoPagina: number = 3;
   tipo: string = "PISOS";
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private carrinhoService: CarrinhoService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.carregarProdutos();
   }
 
-  carregarProdutos(): void {
-  this.http.get<any>(`http://localhost:8080/loja/produtos/tipo?tipo=${this.tipo}&page=${this.paginaAtual}&size=${this.tamanhoPagina}`)
-    .subscribe({
-      next: (resposta) => {
-        this.produtos = resposta.content;
-        this.totalPaginas = resposta.totalPages;
-      },
-      error: (erro) => {
-        console.error('Erro ao buscar produtos:', erro);
-      }
+  adicionarAoCarrinho(produto: any) {
+    this.carrinhoService.adicionar({
+      nome: produto.nome,
+      quantidade: 1,
+      preco: produto.preco
     });
-}
+  }
+
+  carregarProdutos(): void {
+    this.http.get<any>(`http://localhost:8080/loja/produtos/tipo?tipo=${this.tipo}&page=${this.paginaAtual}&size=${this.tamanhoPagina}`)
+      .subscribe({
+        next: (resposta) => {
+          this.produtos = resposta.content;
+          this.totalPaginas = resposta.totalPages;
+        },
+        error: (erro) => {
+          console.error('Erro ao buscar produtos:', erro);
+        }
+      });
+  }
 
   proximaPagina(): void {
     if (this.paginaAtual + 1 < this.totalPaginas) {

@@ -11,7 +11,7 @@
         <p><strong>Prioridade:</strong> {{ produtoSelecionado.prioridade }}</p>
         <p><strong>Descrição:</strong> {{ produtoSelecionado.descQuantidade }}</p>
         <p><strong>Preço:</strong> {{ produtoSelecionado.vlrUnit | currency:'BRL' }}</p>
-        <button class="btn btn-primary" (click)="adicionarAoCarrinho(produtoSelecionado)">Comprar</button>
+        <button class="btn btn-primary" (click)="adicionarAoCarrinho(produtoSelecionado)">Adicionar ao carrinho</button>
         <button type="button" class="btn btn-warning" [routerLink]="['/editarProduto', produtoSelecionado.id]">Editar</button>
         <button class="btn btn-danger" (click)="deletarProduto(produtoSelecionado.id)">Excluir</button>
       </div>
