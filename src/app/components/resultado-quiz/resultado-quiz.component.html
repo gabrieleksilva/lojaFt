@@ -6,8 +6,13 @@
       <div class="card-body">
         <img [src]="'http://localhost:8080' + produto.imagem" width="150" />
         <h5 class="card-title">{{ produto.nome }}</h5>
-        <p class="card-text">Marca: {{ produto.marca }}</p>
-        <p class="card-text">Preço: {{ produto.vlrUnit | currency:'BRL' }}</p>
+        <p><strong>Marca:</strong> {{ produto.marca }}</p>
+        <p><strong>Estilo de decoração:</strong> {{ produto.estiloDecoracao }}</p>
+        <p><strong>Cor do ambiente:</strong> {{ produto.corAmbiente }}</p>
+        <p><strong>Local de Instalação:</strong> {{ produto.localInstalacao }}</p>
+        <p><strong>Prioridade:</strong> {{ produto.prioridade }}</p>
+        <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
+        <p class="card-text"><strong>Preço:</strong> {{ produto.vlrUnit | currency:'BRL' }}</p>
       </div>
     </div>
   </div>

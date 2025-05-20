@@ -1,0 +1,6 @@
+.help-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3rem;
+  cursor: pointer;
+}
