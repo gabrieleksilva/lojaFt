@@ -8,7 +8,7 @@
     <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
     <p><strong>Preço:</strong> {{ produto.vlrUnit | currency:'BRL' }}</p>
     <button class="btn-comprar">Comprar</button>
-    <button class="btn-visualizar" [routerLink]="['/home']">Visualizar</button>
+    <button class="btn-visualizar" [routerLink]="['/listarProduto', produto.id]">Visualizar</button>
   </div>
 </div>
 
