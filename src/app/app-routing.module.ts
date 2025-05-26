@@ -16,6 +16,7 @@ import { ListarIluminacoesComponent } from './components/listar-iluminacoes/list
 import { ListarProdutoComponent } from './components/listar-produto/listar-produto.component';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {path: 'login', component: UsuarioComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'listarIluminacoes', component: ListarIluminacoesComponent},
   {path: 'listarProduto/:id', component: ListarProdutoComponent},
   {path: 'editarProduto/:id', component: EditarProdutoComponent},
+  {path: 'search', component: SearchComponent},
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'resultado', component: ResultadoQuizComponent},
   {path: 'contato', component: ContatoComponent}

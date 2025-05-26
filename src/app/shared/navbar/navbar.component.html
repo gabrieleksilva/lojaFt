@@ -1,18 +1,25 @@
 <header class="container-fluid py-3">
   <div class="w-100 px-3 mb-3 d-flex align-items-center justify-content-between">
     <img src="assets/image/logo.jpg" alt="Logo da loja" class="me-3">
-    <form class="d-flex flex-grow-1 me-3">
-      <div class="search-container w-100 position-relative">
-        <input type="search" class="form-control search-input" placeholder="O que você procura hoje?">
-        <button class="search-button" type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"
-            width="20" height="20">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-          </svg>
-        </button>
-      </div>
-    </form>
+    <form class="d-flex flex-grow-1 me-3" (ngSubmit)="buscar()" #formBusca="ngForm">
+  <div class="search-container w-100 position-relative">
+    <input
+      type="search"
+      name="search"
+      [(ngModel)]="search"
+      class="form-control search-input"
+      placeholder="O que você procura hoje?"
+    />
+    <button class="search-button" type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" width="20" height="20">
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+        />
+      </svg>
+    </button>
+  </div>
+</form>
+
 
     <div class="d-flex align-items-center gap-3">
       <a href="carrinho" class="text-dark" title="Carrinho">

@@ -24,6 +24,7 @@ import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
 import { FormsModule } from '@angular/forms';
 import { ResultadoQuizComponent } from './components/resultado-quiz/resultado-quiz.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ResultadoQuizComponent } from './components/resultado-quiz/resultado-qu
     CarrinhoComponent,
     EditarProdutoComponent,
     ResultadoQuizComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
