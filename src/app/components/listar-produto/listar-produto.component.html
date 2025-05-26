@@ -1,7 +1,7 @@
 <div class="produtos-container">
   <div class="produto-card" *ngIf="produtoSelecionado">
     <div class="produto-conteudo">
-      <img [src]="'http://localhost:8080' + produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" />
+      <img [src]="produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" width="200" height="150" />
       <div class="produto-detalhes">
         <h3>{{ produtoSelecionado.nome }}</h3>
         <p><strong>Marca:</strong> {{ produtoSelecionado.marca }}</p>

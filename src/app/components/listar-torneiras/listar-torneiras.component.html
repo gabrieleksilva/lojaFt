@@ -2,7 +2,7 @@
 <div class="produtos-container">
   <div *ngFor="let produto of produtos" class="produto-card">
 
-    <img [src]="'http://localhost:8080' + produto.imagem" alt="{{ produto.nome }}" width="200" height="150" />
+    <img [src]="produto.imagem" alt="{{ produto.nome }}" width="200" height="150" />
     <p><strong>Nome:</strong> {{ produto.nome }}</p>
     <p><strong>Marca:</strong> {{ produto.marca }}</p>
     <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
