@@ -1,4 +1,12 @@
-<h1>Argamassas e Rejuntes</h1>
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h1>Argamassas e Rejuntes</h1>
+  <button
+    class="btn btn-success"
+    [routerLink]="['/cadastroProduto']">
+    Cadastrar Produto
+  </button>
+</div>
+
 <div class="produtos-container">
   <div *ngFor="let produto of produtos" class="produto-card">
 
@@ -7,12 +15,12 @@
     <p><strong>Marca:</strong> {{ produto.marca }}</p>
     <p><strong>Descrição:</strong> {{ produto.descQuantidade }}</p>
     <p><strong>Preço:</strong> {{ produto.vlrUnit | currency:'BRL' }}</p>
-    <!-- <button class="btn btn-success me-2">Comprar</button> -->
     <button class="btn btn-primary me-2" [routerLink]="['/listarProduto', produto.id]">Visualizar</button>
-  </div></div>
-
-  <div class="paginacao">
-    <button (click)="paginaAnterior()" [disabled]="paginaAtual === 0">Anterior</button>
-    <span>Página {{ paginaAtual + 1 }} de {{ totalPaginas }}</span>
-    <button (click)="proximaPagina()" [disabled]="paginaAtual + 1 >= totalPaginas">Próxima</button>
   </div>
+</div>
+
+<div class="paginacao mt-4">
+  <button (click)="paginaAnterior()" [disabled]="paginaAtual === 0">Anterior</button>
+  <span>Página {{ paginaAtual + 1 }} de {{ totalPaginas }}</span>
+  <button (click)="proximaPagina()" [disabled]="paginaAtual + 1 >= totalPaginas">Próxima</button>
+</div>
