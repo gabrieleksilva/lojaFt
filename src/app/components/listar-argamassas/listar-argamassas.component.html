@@ -1,10 +1,12 @@
 <div class="d-flex justify-content-between align-items-center mb-2">
   <h1>Argamassas e Rejuntes</h1>
   <button
+    *ngIf="estaLogado"
     class="btn btn-success"
     [routerLink]="['/cadastroProduto']">
     Cadastrar Produto
   </button>
+  
 </div>
 
 <div class="produtos-container">

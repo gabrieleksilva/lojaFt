@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListarProdutoComponent implements OnInit {
   produtoSelecionado: any = null;
+  estaLogado: boolean = false;
 
   constructor(
     private http: HttpClient,
@@ -17,6 +18,7 @@ export class ListarProdutoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.estaLogado = !!localStorage.getItem('token');
     const idParam = this.route.snapshot.paramMap.get('id');
     const id = Number(idParam);
     if (id) {
@@ -68,5 +70,10 @@ export class ListarProdutoComponent implements OnInit {
         console.error('Erro ao buscar produto por ID:', erro);
       }
     });
+  }
+  logout(): void {
+    localStorage.removeItem('token'); // ou sessionStorage.removeItem
+    this.estaLogado = false;
+    this.router.navigate(['/login']); // redireciona para o login
   }
 }

@@ -1,6 +1,8 @@
 import { CarrinhoService } from './../carrinho.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LoginServiceService } from '../login-service.service';
+
 
 @Component({
   selector: 'app-listar-pisos',
@@ -13,14 +15,17 @@ export class ListarPisosComponent implements OnInit {
   totalPaginas: number = 0;
   tamanhoPagina: number = 3;
   tipo: string = "PISOS";
+  estaLogado: boolean = false;
 
   constructor(
     private carrinhoService: CarrinhoService,
-    private http: HttpClient
+    private http: HttpClient,
+    private authService: LoginServiceService
   ) {}
 
   ngOnInit(): void {
     this.carregarProdutos();
+    this.estaLogado = this.authService.estaAutenticado();
   }
 
   adicionarAoCarrinho(produto: any) {

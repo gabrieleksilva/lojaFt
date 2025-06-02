@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LoginServiceService } from '../login-service.service';
 
 @Component({
   selector: 'app-listar-argamassas',
@@ -12,11 +13,13 @@ export class ListarArgamassasComponent implements OnInit {
   totalPaginas: number = 0;
   tamanhoPagina: number = 3;
   tipoProduto: string = "ARGAMASSAS";
+  estaLogado: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: LoginServiceService) {}
 
   ngOnInit(): void {
     this.carregarProdutos();
+    this.estaLogado = this.authService.estaAutenticado();
   }
 
   carregarProdutos(): void {
